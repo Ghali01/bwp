@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block main %}
+        <main class="index-d" style="width: 600px; margin:auto; margin-top:120px;">
+          <div class="_col">
+            <h2 class="_title">
+              للاشتراك الرجاء تعبئة الاستمارة
+            </h2>
+            <h6 style="color: red;">
+              الحقول المعلّمة بـ* هي حقول إجباريّة
+            </h6>
+            <form action="" class="reg-form" method="post">
+              {% csrf_token %}
+              <label for="">اسم الطفل كاملاً * </label>
+              <input required type="text" name="kid-name">
+              <label for="">المواليد * </label>
+              <input type="date" required name="kid-name">
+              
+              <label for="">اسم الأب كاملاً*</label>
+              <input type="text" required name="father-name">
+              <label for="">اسم الأم كاملاً *</label>
+              <input type="text" required name="mother-name">
+              <label for="">الجنس </label>
+              <select name="gender" id="">
+                <option value="m">ذكر</option>
+                <option value="f">انثى</option>
+              </select>
+              
+              <label for="">اختر اللغة التي ترغب بتعليمها لطفلك *</label>
+              <select name="lang" id="">
+                <option value="ar">العربية</option>
+                <option value="en">الانجليزية</option>
+              </select>
+              <label for="can-speak">هل يستطيع طفلك التحدث بها ؟ *</label>
+              <select name="" id="">
+                <option value="yes">نعم</option>
+                <option value="no">لا</option>
+              </select>
+            
+            <label for="">ماهو مستواه/ها بها؟ *</label>
+              <select name="lvl" id="">
+                <option value="g">جيد</option>
+                <option value="m">وسط</option>
+                <option value="b">مبتدئ</option>
+              </select>
+                          <label for="">الإيميل e-mail </label>
+              <input type="email" name="email">
+              <label for="">الهاتف مع الرمز الدولي*</label>
+              <input type="phone" required name="phone">
+              <label for="">البلد المقيم فيها حالياً *</label>
+              <input type="text" required name="country">
+              <label for="">المدينة المقيم فيها حالياً *</label>
+              <input type="text" required name="city">
+              <label for="">عنوان سكن الطفل بالتفصيل*</label>
+              <textarea name="addres"  required id="" cols="30" rows="5"></textarea>
+              <label for="">رسالتك أو سؤالك للمدرسة</label>
+              <textarea name="msg" id="" cols="30" rows="5"></textarea>
+              <button type="submit"  href="#" class="btn mt-2 p-btn">تسجيل</button>
+              
+              
+            </form>
+          </div>
+        </main>
+
+
+{% endblock %}

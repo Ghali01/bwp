@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block main %}
+   <main class="index-d row">
+          <div class="_col">
+            <h1 class="lib-title" id="b1">القصص</h1>
+            <div class="lib-flex">
+
+              {% for s in stories %}
+              <div class="item">
+                <img src="{{s.image.url}}" alt="" srcset="">
+                <h4 class="title">{{s.name}}</h4>
+                                <a href="{{s.url}}" class="btn s-btn">تشغيل</a>
+                                {% if not request.user.is_anonymous and request.user.is_authenticated  and request.user.is_superuser %}
+
+                                <a href="{% url 'update-item' s.id %}" style="margin-top: 8px;" class="btn s-btn">تعديل</a>
+                                <a href="{% url 'delete-item' s.id %}" style="margin-top: 8px;" class="btn s-btn">حذف</a>
+                                {% endif %}
+
+              </div>
+              {% endfor %}
+
+              
+
+              
+            </div>
+            <h1 class="lib-title" id="b2">الافلام</h1>
+            <div class="lib-flex">
+        
+              {% for s in movies %}
+              <div class="item">
+                <img src="{{s.image.url}}" alt="" srcset="">
+                <h4 class="title">{{s.name}}</h4>
+                                <a href="{{s.url}}" class="btn s-btn">تشغيل</a>
+                                {% if not request.user.is_anonymous and request.user.is_authenticated  and request.user.is_superuser %}
+
+                                <a href="{% url 'update-item' s.id %}" style="margin-top: 8px;" class="btn s-btn">تعديل</a>
+                                <a href="{% url 'delete-item' s.id %}" style="margin-top: 8px;" class="btn s-btn">حذف</a>
+                                {% endif %}
+
+              </div>
+              {% endfor %}
+
+              
+      
+            </div>
+            <h1 class="lib-title" id="b3">الاغاني</h1>
+            <div class="lib-flex">
+              
+              
+              {% for s in songs %}
+              <div class="item">
+                <img src="{{s.image.url}}" alt="" srcset="">
+                <h4 class="title">{{s.name}}</h4>
+                                <a href="{{s.url}}" class="btn s-btn">تشغيل</a>
+                                {% if not request.user.is_anonymous and request.user.is_authenticated  and request.user.is_superuser %}
+
+                                <a href="{% url 'update-item' s.id %}" style="margin-top: 8px;" class="btn s-btn">تعديل</a>
+                                <a href="{% url 'delete-item' s.id %}" style="margin-top: 8px;" class="btn s-btn">حذف</a>
+                                {% endif %}
+
+              </div>
+              {% endfor %}
+
+              
+
+            </div>
+          </div>
+        </main>
+        
+{% endblock %}

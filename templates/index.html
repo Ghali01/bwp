@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<main class="index-d row">
+  <div class="col-8 _col">
+      <h2 class="_title">
+          المدرسة العربية
+      </h2>
+      <h4 class="_title">
+          تعليم العربية بمتعة
+      </h4>
+      <p> قم بتسجيل طفلك للوصول الى القصص والاغاني والمحتويات الاخرى مجاناً</p>
+      <ul>
+          <li>
+              قصص باللغة العربية تساعد تنمية مهارات طفلك بالكتابة
+          </li>
+          <li>
+              اغاني تنمي المهارات الفنية للطفل
+          </li>
+          <li>
+              افلام تاخذ طفلك الى عمق الثقافة العربية
+          </li>
+      </ul>
+      {% if request.user.is_anonymous or not request.user.is_authenticated %}
+      <a href="{% url 'register' %}" class="btn p-btn">تسجيل</a>
+      {% endif %}
+
+  </div>
+  <div class="col-4">
+      <img src="{% static 'img/index-kids.png' %}">
+  </div>
+</main>
+
+{% endblock %}

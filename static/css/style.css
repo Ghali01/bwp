@@ -1,0 +1,120 @@
+:root{
+    --navy:#05445E;
+    --grotto:#189AB4;
+    --green:#75E6DA;
+    --white:#D4F1F4;
+}
+
+.my-nav{
+    padding: 4px 8px;
+    background-color:var(--navy) !important;
+}
+.my-nav .navbar-brand{
+    font-size: 15px;
+    color: var(--green);
+    font-weight: bolder;
+}
+
+.my-nav .nav-link{
+    color: var(--white);
+}
+.my-nav .nav-link:hover{
+    color: var(--green);
+}
+.index-d{
+    background-color:var(--grotto);
+    padding: 16px;
+    border-radius: 16px;
+    margin: 120px 60px;
+    margin-top: 120px;
+    min-height: 600px;
+
+}
+.index-d img{
+    width: 400px;
+    margin-top: 120px;
+}
+.index-d ._col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index-d ._title:nth-child(1){
+    color: var(--white);
+}
+.index-d ._title:nth-child(2){
+    color: var(--navy);
+}
+.index-d p{
+    color: var(--white);
+}
+.p-btn{
+    color: var(--green);
+    background-color: var(--navy);
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+}
+.p-btn:hover{
+    color: var(--green);
+}
+.reg-form{
+    width: 100%;
+}
+.reg-form label{
+    color: var(--white);
+    font-size: 16px;
+}
+.reg-form input,
+.reg-form select,
+.reg-form textarea{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--navy);
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--white);
+    color: var(--navy);
+}
+
+.reg-form input:focus,
+.reg-form select:focus,
+.reg-form textarea:focus{
+    border: 1px solid var(--navy);
+    outline: none;    
+}
+.lib-title{
+    color: var(--navy);
+}
+
+.lib-flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.lib-flex .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 4px;
+    justify-content: start;
+}
+.lib-flex .item img{
+    width: 200px;
+    margin: 0;
+    border-radius: 8px;
+}
+.s-btn{
+    background: rgb(24,154,180);
+    background: linear-gradient(90deg, rgba(24,154,180,1) 6%, rgba(5,68,94,1) 88%);   
+    color: white;
+    border-radius: 10px;
+}
+.s-btn:hover{
+    color: var(--green);
+}
