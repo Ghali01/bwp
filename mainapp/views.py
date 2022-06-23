@@ -69,3 +69,8 @@ def loginV(request):
             messages.error(request,'خطأ بالمعلومات')
     return render(request,'login.html')
 
+
+def logoutV(request):
+    logout(request)
+
+    return redirect('/')

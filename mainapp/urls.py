@@ -8,5 +8,6 @@ urlpatterns=[
     path('update-item/<int:pk>',updateItem,name='update-item'),
     path('delete-item/<int:pk>',deleteItem,name='delete-item'),
     path('login-admin',loginV,name='login'),
+    path('logout',logoutV,name='logout'),
 
 ]

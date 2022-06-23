@@ -43,7 +43,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'register' %}">تسجيل</a>
                       </li>
-                  {% endif %}
+                        
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">تسجيل دخول</a>
+                      </li>
+                  {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">تسجيل خروج</a>
+                      </li>
+
+                      {% endif %}
                     </ul>
                 </div>
               </nav>
